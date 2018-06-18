@@ -1,0 +1,8 @@
+perform_base:
+    security:
+        crud_voter: true
+    menu:
+        simple:
+            products:
+                crud: product
+                icon: "shopping-basket"

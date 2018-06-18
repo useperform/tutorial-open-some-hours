@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+product_crud:
+    type: crud
+    resource: product
+    prefix: /products
+
+actions:
+    resource: '@PerformBaseBundle/Resources/config/routing_action.yml'
