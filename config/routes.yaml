@@ -4,4 +4,17 @@ product_crud:
     prefix: /products
 
 actions:
-    resource: '@PerformBaseBundle/Resources/config/routing_action.yml'
+    resource: '@PerformBaseBundle/Resources/config/routing/actions.yml'
+    prefix: /_action
+
+users:
+    resource: "perform_user.user"
+    type: crud
+    prefix: /users
+
+login:
+    resource: '@PerformUserBundle/Resources/config/routing_login.yml'
+
+forgot_password:
+    resource: '@PerformUserBundle/Resources/config/routing/forgot_password.yml'
+    prefix: /forgot-password

@@ -50,6 +50,9 @@
     "doctrine/orm": {
         "version": "v2.6.1"
     },
+    "egulias/email-validator": {
+        "version": "2.1.4"
+    },
     "gedmo/doctrine-extensions": {
         "version": "v2.4.35"
     },
@@ -83,6 +86,12 @@
     "perform/licensing": {
         "version": "dev-master"
     },
+    "perform/notification-bundle": {
+        "version": "dev-master"
+    },
+    "perform/user-bundle": {
+        "version": "dev-master"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -112,6 +121,9 @@
             "version": "1.2",
             "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
         }
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.0.2"
     },
     "symfony/asset": {
         "version": "v4.1.0"
@@ -253,6 +265,15 @@
     },
     "symfony/stopwatch": {
         "version": "v4.1.0"
+    },
+    "symfony/swiftmailer-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "3db029c03e452b4a23f7fc45cec7c922c2247eb8"
+        }
     },
     "symfony/translation": {
         "version": "3.3",

@@ -1,0 +1,3 @@
+perform_notification:
+    email:
+        default_from: {'mail@example.com': 'Open Some Hours mailer'}

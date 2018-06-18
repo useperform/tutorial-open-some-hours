@@ -1,7 +1,14 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        perform:
+            entity:
+                class: Perform\UserBundle\Entity\User
+                property: email
+
+    encoders:
+        Perform\UserBundle\Entity\User:
+            algorithm: bcrypt
     access_decision_manager:
         strategy: unanimous
     firewalls:
@@ -10,17 +17,17 @@ security:
             security: false
         main:
             anonymous: true
+            pattern: ^/
+            form_login:
+                login_path: perform_user_login
+                check_path: perform_user_login
+            logout:
+                path: perform_user_logout
+                target: /
 
-            # activate different ways to authenticate
-
-            # http_basic: true
-            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: true
-            # https://symfony.com/doc/current/security/form_login_setup.html
-
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
+    # Restrict all pages to logged-in users, but with an exception for
+    # the login page so unauthenticated users can login
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/forgot-password, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, role: ROLE_USER }
