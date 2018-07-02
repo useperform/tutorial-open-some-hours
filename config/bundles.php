@@ -18,4 +18,5 @@ return [
     Perform\NotificationBundle\PerformNotificationBundle::class => ['all' => true],
     Perform\UserBundle\PerformUserBundle::class => ['all' => true],
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
+    Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true, 'test' => true],
 ];
