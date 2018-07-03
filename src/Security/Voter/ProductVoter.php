@@ -21,7 +21,7 @@ class ProductVoter extends Voter
             return false;
         }
 
-        if ($attribute === 'VIEW') {
+        if ($attribute === 'VIEW' || $attribute === 'EDIT') {
             return true;
         }
 
