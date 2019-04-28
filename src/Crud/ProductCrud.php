@@ -32,6 +32,8 @@ class ProductCrud extends AbstractCrud
             'type' => 'string',
         ])->add('quantity', [
             'type' => 'integer',
+        ])->add('image', [
+            'type' => 'media',
         ])->add('description', [
             'type' => 'text',
         ]);

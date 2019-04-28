@@ -1,0 +1,18 @@
+perform_media:
+    url_generators:
+        default:
+            type: simple
+            path: '/uploads'
+    buckets:
+        default:
+            flysystem: 'oneup_flysystem.default_filesystem'
+            url_generator: 'perform_media.url_generator.default'
+            types:
+                -
+                    type: image
+                    engine: imagick
+                    widths:
+                        - 20
+                        - 200
+                        - 350
+                        - 1600

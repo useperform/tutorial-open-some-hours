@@ -74,6 +74,9 @@
     "knplabs/knp-menu-bundle": {
         "version": "v2.2.1"
     },
+    "league/flysystem": {
+        "version": "1.0.45"
+    },
     "monolog/monolog": {
         "version": "1.23.0"
     },
@@ -82,6 +85,15 @@
     },
     "nikic/php-parser": {
         "version": "v4.0.2"
+    },
+    "oneup/flysystem-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "0eb87bba411c227da027fe5f7c1dc7954b02f242"
+        }
     },
     "pagerfanta/pagerfanta": {
         "version": "v1.1.0"
@@ -94,6 +106,9 @@
     },
     "perform/licensing": {
         "version": "dev-master"
+    },
+    "perform/media-bundle": {
+        "version": "dev-flysystem"
     },
     "perform/notification-bundle": {
         "version": "dev-master"
@@ -112,6 +127,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "ralouphie/mimey": {
+        "version": "1.0.8"
     },
     "sensio/framework-extra-bundle": {
         "version": "4.0",
@@ -283,6 +301,9 @@
             "version": "3.3",
             "ref": "f8a63faa0d9521526499c0a8f403c9964ecb0527"
         }
+    },
+    "symfony/serializer": {
+        "version": "v4.1.1"
     },
     "symfony/stopwatch": {
         "version": "v4.1.0"

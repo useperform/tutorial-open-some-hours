@@ -31,6 +31,11 @@ class Product
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Perform\MediaBundle\Entity\File")
+     */
+    private $image;
+
     public function getId()
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Product
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImage(): File
+    {
+        return $this->image;
+    }
+
+    public function setImage(File $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
